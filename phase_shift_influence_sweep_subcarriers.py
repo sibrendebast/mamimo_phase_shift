@@ -117,23 +117,18 @@ for pow in power:
 
 # plot the results using the dB scale and the normal scale
 plt.figure()
-# ax = plt.subplots(111)
 plt.title("Channel gain due to subcarriers")
 plt.semilogx(num_subs, norm_power_dB)
 plt.xlabel('Number of subcarriers')
-# plt.xticks(num_subs)
 plt.ylabel('Normalised Channel Gain [dB]')
 plt.grid()
 plt.savefig('gain_vs_subcarriers_dB.eps', bbox_inches='tight', pad_inches=0)
 
 
 plt.figure()
-# ax = plt.subplots(111)
 plt.title("Impact of multi-sine waveform \nin function of the number of subcarriers")
 plt.semilogx(num_subs, norm_power)
 plt.xlabel('Number of subcarriers')
-# plt.xticks(num_subs)
 plt.ylabel('Normalised Channel Gain')
 plt.grid()
 plt.savefig('gain_vs_subcarriers.eps', bbox_inches='tight', pad_inches=0)
-# plt.show()

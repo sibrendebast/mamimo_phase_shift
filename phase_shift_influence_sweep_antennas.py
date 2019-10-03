@@ -19,15 +19,14 @@ num_users = 2
 
 antenna_spacing = 0.07  # meter
 user_spacing = 0.5  # meter
-distance_BS = 2
 
 results = []
 results_dB = []
 while num_antennas <= max_num_antennas:
     locations_antenna = [(i*antenna_spacing, 0) for i in range(num_antennas)]
-    receiver_locations = [(user_spacing*i, distance_BS) for i in range(num_users)]
+    receiver_locations = [(user_spacing*i, 1) for i in range(num_users)]
     locations_antenna = [(i*antenna_spacing - num_antennas/2*antenna_spacing + antenna_spacing/2, 0) for i in range(num_antennas)]
-    receiver_locations = [(user_spacing*i - num_users/2*user_spacing + user_spacing/2, distance_BS) for i in range(num_users)]
+    receiver_locations = [(user_spacing*i - num_users/2*user_spacing + user_spacing/2, 2.5) for i in range(num_users)]
 
     power = []
 

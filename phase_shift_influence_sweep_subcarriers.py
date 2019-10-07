@@ -1,6 +1,7 @@
 from math import e, pi, sqrt, floor
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FormatStrFormatter
 
 max_num_sub = 10000
 freq = 2.61E9
@@ -120,8 +121,9 @@ plt.figure()
 plt.title("Channel gain due to subcarriers")
 plt.semilogx(num_subs, norm_power_dB)
 plt.xlabel('Number of subcarriers')
-plt.ylabel('Normalised Channel Gain [dB]')
+plt.ylabel('Normalised Channel Amplitude Gain [dB]')
 plt.grid()
+plt.gca().ticklabel_format(axis='y', style='plain', useOffset=False)
 plt.savefig('gain_vs_subcarriers_dB.eps', bbox_inches='tight', pad_inches=0)
 
 
@@ -129,6 +131,7 @@ plt.figure()
 plt.title("Impact of multi-sine waveform \nin function of the number of subcarriers")
 plt.semilogx(num_subs, norm_power)
 plt.xlabel('Number of subcarriers')
-plt.ylabel('Normalised Channel Gain')
+plt.ylabel('Normalised Channel Amplitude Gain')
 plt.grid()
+plt.gca().ticklabel_format(axis='y', style='plain', useOffset=False)
 plt.savefig('gain_vs_subcarriers.eps', bbox_inches='tight', pad_inches=0)

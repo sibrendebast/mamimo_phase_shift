@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # scenario = "center"
-scenario = "down"
-# scenario = "up"
+# scenario = "down"
+scenario = "up"
 
 freq = 2.61E9
 BW = 20E6
@@ -121,7 +121,7 @@ for idx, l in enumerate(labels):
     plt.plot(BWs, norm_results_dB[idx], label=l)
 plt.xlabel('Channel Bandwidth [Hz]')
 # plt.xticks(num_subs)
-plt.ylabel('Normalised Gain [dB]')
+plt.ylabel('Normalised Amplitude Gain [dB]')
 plt.grid()
 plt.legend()
 plt.savefig('gain_vs_bandwidth_dB_' + scenario + '.eps', bbox_inches='tight', pad_inches=0)
@@ -136,7 +136,7 @@ for idx, l in enumerate(labels):
     plt.plot(BWs, norm_results[idx], label=l)
 plt.xlabel('Channel Bandwidth [Hz]')
 # plt.xticks(num_subs)
-plt.ylabel('Normalised Channel Gain')
+plt.ylabel('Normalised Amplitude Channel Gain')
 plt.grid()
 plt.legend()
 plt.savefig('gain_vs_bandwidth_' + scenario + '.eps', bbox_inches='tight', pad_inches=0)
